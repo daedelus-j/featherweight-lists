@@ -1,0 +1,119 @@
+/* Demo Page Theme Styles */
+
+.header-1, .header-2, .header-3 {
+  color: #455A64;
+  margin: 15px 0;
+}
+
+.header-3 {
+  margin: 10px 0;
+}
+
+.demo-section {
+  margin: 20px;
+}
+
+/* Example Form Code Styles */
+
+.btn-example-secondary {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #455A64;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 13px;
+  transition: transform .2s ease-in-out;
+}
+
+.btn-example-primary {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border-radius: 2px;
+  display: inline-block;
+  background: #FFAB00;
+  font-size: 16px;
+  line-height: 13px;
+  transition: transform .2s ease-in-out;
+  padding: 10px 16px;
+  margin-right: 10px;
+}
+
+.btn-example-primary:hover,
+.btn-example-primary:focus
+{
+  outline: none;
+  transform: scale(1.06);
+}
+
+.main-demo {
+  margin: 40px auto;
+  max-width: 90%;
+}
+
+.main-demo-actions {
+  margin-bottom: 20px;
+  margin-left: 8px;
+}
+
+.main-demo-result {
+  padding: 10px;
+  background: #607D8B;
+  color: white;
+  margin: 0 0 35px;
+  border-radius: 3px;
+  min-height: 25px;
+}
+
+.main-demo-form-cont {
+  padding: 10px;
+  border-left: 8px solid #CCC;
+}
+
+.main-demo-item-count {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.item-char-exit-up {
+  position: absolute;
+  animation: up .1s ease-in-out;
+}
+
+.item-char-exit-down {
+  position: absolute;
+  animation: down .1s ease-in-out;
+}
+
+@keyframes up {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+/* List Form Overrides */
+
+.ls-cont {
+  width: 300px;
+}
+
+.horizontal-left.ls-cont,
+.horizontal-right.ls-cont {
+  width: 100%;
+}
+

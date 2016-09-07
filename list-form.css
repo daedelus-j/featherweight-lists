@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ECEFF1;
+}
+
+.content {
+  font-family: 'Fira Sans', 'Helvetica Neue', sans-serif;
+  width: 800px;
+  margin: 100px auto;
+}
+
+/* ListForm helpers */
+
+.ls-clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.ls-clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .ls-clearfix { height: 1%; }
+.ls-clearfix { display: block; }
+
+.ls-float-r {
+  float: right;
+}
+
+.ls-float-l {
+  float: left;
+}
+
+/*
+ *
+ * ListForm - Form styles
+ *
+ */
+
+.ls-input,
+.ls-input:focus,
+.ls-input:hover {
+  outline: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  width: calc(80% - 20px);
+  border: none;
+  background: transparent;
+  color: #455A64;
+  border-bottom: 2px solid #B0BEC5;
+  transition: border .3s ease-in-out;
+}
+
+.ls-input::-webkit-input-placeholder {
+  color: #90A4AE;
+}
+
+.ls-input:focus {
+  border-bottom: 2px solid #607D8B;
+}
+
+.ls-input-label {
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  color: #607D8B;
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.input--focus .ls-input-label {
+  opacity: 1;
+}
+
+.ls-input-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2px 8px;
+  color: #607D8B;
+  margin-left: 8px;
+  border: 1px solid #607D8B;
+  border-radius: 2px;
+  transition: color .2s ease-in-out, background .2s ease-in-out;
+}
+
+.ls-input-btn:hover {
+  color: #37474F;
+  border: 1px solid #37474F;
+}
+
+.ls-input-btn-icon {
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.ls-input-btn-text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/*
+ *
+ * ListForm - Button Styles
+ *
+ */
+
+.ls-btn-primary {
+  text-decoration: none;
+  color: #FFC400;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 13px;
+  transition: transform .2s ease-in-out;
+  -webkit-transition: transform .2s ease-in-out;
+  -moz-transition: transform .2s ease-in-out;
+  -ms-transition: transform .2s ease-in-out;
+}
+
+.ls-btn-primary:hover,
+.ls-btn-primary:focus
+{
+  outline: none;
+  color: #FFAB00;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+.ls-btn-secondary {
+  text-decoration: none;
+}
+
+.ls-btn-secondary-icon {
+  text-decoration: none;
+  color: #FFC400;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 13px;
+  transition: transform .2s ease-in-out;
+  -webkit-transition: transform .2s ease-in-out;
+  -moz-transition: transform .2s ease-in-out;
+  -ms-transition: transform .2s ease-in-out;
+}
+
+
+/* ListForm List Styles */
+
+.ls-item {
+  background: #455A64;
+  color: #ECEFF1;
+  padding: 10px;
+  letter-spacing: 1px;
+  transition: background .2s ease-in-out;
+  border-bottom: 1px solid #78909C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.ls-item-btn-remove-icon {
+  margin-top: 3px;
+  position: relative;
+}
+
+.ls-item-text {
+  max-width: 83%;
+  font-size: 16px;
+}
+
+/* Layout Styles Overrides */
+
+
+.horizontal-left .ls-input-cont,
+.horizontal-left .ls-list-cont {
+  float: left;
+}
+
+.horizontal-left .ls-input-cont {
+  margin-right: 15px;
+  vertical-align: bottom
+}
+
+.horizontal-right .ls-list-cont {
+  vertical-align: bottom
+}
+
+.horizontal-left .ls-list-cont {
+  margin-left: 10px;
+}
+
+.horizontal-left .ls-item,
+.horizontal-right .ls-item
+{
+  display: inline-block;
+  padding: 8px 10px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  vertical-align: bottom;
+  border-radius: 3px;
+}
+
+.horizontal-left .ls-item-btn-remove-icon,
+.horizontal-right .ls-item-btn-remove-icon {
+ margin-left: 8px;
+}
+
+
+.horizontal-left .ls-input-cont,
+.horizontal-right .ls-input-cont {
+  display: inline-block;
+}
+
+.vertical-top .ls-list-cont {
+  margin-top: 10px;
+}
+
+.vertical-bottom .ls-list-cont {
+  margin-bottom: 10px;
+}
+
+
+/* Animations */
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    -ms-transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    -ms-transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    -ms-transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    -ms-transform: translate3d(4px, 0, 0);
+  }
+}
+
+@moz-keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
